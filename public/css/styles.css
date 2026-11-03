@@ -1,0 +1,975 @@
+
+/* =====================================================
+   RECUERDOS INOLVIDABLES
+   Diseño pastel: rosa, lila y crema
+   Hoja de estilos general
+   ===================================================== */
+
+/* ---------- COLORES GENERALES ---------- */
+
+:root {
+    --primary-color: #c96b91;
+    --primary-hover: #ad5078;
+    --secondary-color: #f2dce8;
+    --text-dark: #514651;
+    --bg-light: #fff8f0;
+    --white: #ffffff;
+    --border-color: #ead8e5;
+
+    --pastel-pink: #f8e6ee;
+    --pastel-pink-dark: #efd0df;
+    --pastel-lilac: #eee7f8;
+    --pastel-lilac-dark: #ded1ef;
+    --pastel-cream: #fff8f0;
+    --pastel-gold: #d9bd8b;
+
+    --shadow-soft: 0 5px 20px rgba(105, 72, 96, 0.08);
+    --shadow-hover: 0 12px 28px rgba(105, 72, 96, 0.14);
+
+    --radius-soft: 16px;
+    --radius-small: 10px;
+}
+
+/* ---------- REINICIO GENERAL ---------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    min-height: 100vh;
+   
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: var(--primary-hover);
+    transition: color 0.25s ease;
+}
+
+a:hover {
+    color: #92506f;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.3;
+    color: #76516d;
+}
+
+p {
+    margin-bottom: 0.8rem;
+}
+
+/* ---------- CONTENEDOR PRINCIPAL ---------- */
+
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ---------- ENCABEZADO Y MENÚ ---------- */
+
+header,
+nav.navbar {
+    background-color: #fffdfb;
+}
+
+.navbar {
+    background-color: #fffdfb;
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 0;
+    box-shadow: 0 3px 14px rgba(105, 72, 96, 0.05);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+/* Logo: conserva su diseño y sus colores */
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 0.5rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.logo-text {
+    color: #e6196e;
+    text-decoration: none;
+}
+
+.logo-text span {
+    color: #514651;
+}
+
+/* Enlaces de navegación */
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+    border-radius: 22px;
+    color: var(--text-dark);
+    font-weight: 600;
+    text-decoration: none;
+    transition:
+        color 0.25s ease,
+        background-color 0.25s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-hover);
+    background-color: var(--pastel-pink);
+}
+
+/* Bienvenida del usuario */
+
+.user-welcome {
+    color: var(--primary-hover);
+    font-weight: bold;
+}
+
+/* Botón de cerrar sesión */
+
+.btn-logout {
+    color: #b84e67 !important;
+}
+
+/* Botones del menú */
+
+.btn-nav {
+    background-color: var(--primary-color);
+    color: var(--white) !important;
+    padding: 0.45rem 1rem !important;
+    border: 1px solid var(--primary-color);
+    border-radius: 24px;
+}
+
+.btn-nav:hover {
+    background-color: var(--primary-hover) !important;
+    color: var(--white) !important;
+}
+
+/* ---------- ENCABEZADOS DE SECCIÓN ---------- */
+
+.directory-header {
+    text-align: center;
+    margin: 2.5rem 0 1.5rem;
+    padding: 1rem 0;
+}
+
+.directory-header h1 {
+    color: var(--primary-hover);
+    margin-bottom: 0.6rem;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+
+.directory-header p {
+    color: #776b77;
+}
+
+/* ---------- FILTROS ---------- */
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.65rem;
+    margin-bottom: 2rem;
+}
+
+.btn-filter {
+    padding: 0.55rem 1.2rem;
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 25px;
+    text-decoration: none;
+    color: var(--text-dark);
+    font-size: 0.9rem;
+    transition: all 0.25s ease;
+}
+
+.btn-filter:hover,
+.btn-filter.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
+
+/* ---------- GRILLA DE PROVEEDORES ---------- */
+
+.providers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+/* ---------- TARJETAS GENERALES ---------- */
+
+.card {
+    background-color: var(--white);
+    border-radius: var(--radius-soft);
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    position: relative;
+    box-shadow: var(--shadow-soft);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+    border-color: #dfbfd2;
+}
+
+.card-destacado {
+    border: 2px solid #d8a6c2;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 0.75rem;
+    padding: 0.25rem 0.65rem;
+    border-radius: 12px;
+    text-transform: uppercase;
+}
+
+.category-tag {
+    font-size: 0.8rem;
+    color: var(--primary-hover);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.card h3 {
+    margin: 0.65rem 0;
+}
+
+.location,
+.phone {
+    font-size: 0.9rem;
+    color: #776b77;
+    margin-bottom: 0.5rem;
+}
+
+.description {
+    margin: 0.8rem 0;
+    font-size: 0.95rem;
+}
+
+/* ---------- BOTÓN PRINCIPAL ---------- */
+
+.btn-primary {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: 1px solid var(--primary-color);
+    text-decoration: none;
+    border-radius: var(--radius-small);
+    font-weight: bold;
+    margin-top: 0.5rem;
+    transition:
+        background-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    color: var(--white);
+    box-shadow: 0 5px 14px rgba(173, 80, 120, 0.2);
+}
+
+/* ---------- BOTÓN SECUNDARIO ---------- */
+
+.btn-secondary {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    background-color: var(--pastel-lilac);
+    color: #684f78;
+    border: 1px solid var(--pastel-lilac-dark);
+    text-decoration: none;
+    border-radius: var(--radius-small);
+    margin-top: 0.5rem;
+    transition: background-color 0.25s ease;
+}
+
+.btn-secondary:hover {
+    background-color: var(--pastel-lilac-dark);
+    color: #563b68;
+}
+
+/* ---------- PIE DE PÁGINA ---------- */
+
+.footer {
+    background-color: #f2e7f1;
+    padding: 40px 0 20px;
+    margin-top: 50px;
+    color: var(--text-dark);
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 180px;
+}
+
+.footer-section h4 {
+    color: var(--primary-hover);
+    margin-bottom: 15px;
+    font-size: 1.15rem;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a,
+.social-links a {
+    text-decoration: none;
+    color: #655563;
+    transition: color 0.25s ease;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links a:hover,
+.social-links a:hover {
+    color: var(--primary-hover);
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #dfcfe0;
+    padding-top: 20px;
+    font-size: 0.9rem;
+}
+
+/* ---------- REGISTRO E INICIO DE SESIÓN ---------- */
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3.5rem 0;
+}
+
+.auth-box {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: var(--shadow-soft);
+}
+
+.auth-box h2 {
+    color: var(--primary-hover);
+    margin-bottom: 0.6rem;
+    text-align: center;
+}
+
+.auth-box p {
+    color: #776b77;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #574b57;
+}
+
+.form-group input,
+.form-select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #dfd2dc;
+    border-radius: var(--radius-small);
+    font-size: 1rem;
+    background-color: #fffdfd;
+    color: var(--text-dark);
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-select:focus {
+    outline: none;
+    border-color: #c982a5;
+    box-shadow: 0 0 0 3px rgba(201, 107, 145, 0.14);
+}
+
+/* ---------- MENSAJES DEL SISTEMA ---------- */
+
+.alert {
+    padding: 0.9rem 1rem;
+    border-radius: var(--radius-small);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.alert-danger {
+    background-color: #fbe7e9;
+    color: #913e50;
+    border: 1px solid #f0c9d0;
+}
+
+.alert-success {
+    background-color: #e5f3e7;
+    color: #356b43;
+    border: 1px solid #c7e3cd;
+}
+
+/* Enlace para cambiar entre registro e inicio de sesión */
+
+.auth-switch {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.auth-switch a {
+    color: var(--primary-hover);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* ---------- ADMINISTRACIÓN Y CRUD DE EVENTOS ---------- */
+
+.header-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0 1.5rem;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    background-color: var(--white);
+    border-radius: var(--radius-soft);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-soft);
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.data-table th,
+.data-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.data-table th {
+    background-color: var(--pastel-pink);
+    color: #80516e;
+    font-weight: 600;
+}
+
+.data-table tr {
+    transition: background-color 0.2s ease;
+}
+
+.data-table tr:hover {
+    background-color: #fff8fc;
+}
+
+.data-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* ---------- ESTADOS DE EVENTOS ---------- */
+
+.badge-status {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.status-planificando {
+    background-color: #e8effb;
+    color: #486b9b;
+}
+
+.status-confirmado {
+    background-color: #e4f2e5;
+    color: #39754a;
+}
+
+.status-finalizado {
+    background-color: #eee5f7;
+    color: #79539a;
+}
+
+.status-cancelado {
+    background-color: #fbe7e9;
+    color: #a83f50;
+}
+
+/* ---------- ACCIONES DE TABLAS ---------- */
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.btn-edit {
+    color: #79609b;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-delete {
+    color: #b84e67;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-edit:hover,
+.btn-delete:hover {
+    text-decoration: underline;
+}
+
+/* ---------- ESTADO VACÍO ---------- */
+
+.empty-state {
+    text-align: center;
+    padding: 3rem 1.5rem;
+    background-color: var(--white);
+    border-radius: var(--radius-soft);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-soft);
+}
+
+.empty-state h2,
+.empty-state h3 {
+    margin-bottom: 0.75rem;
+}
+
+/* ---------- TRATAMIENTO DE DATOS ---------- */
+
+/* Estilos opcionales para el aviso si utiliza estas clases.
+   No cambian su funcionamiento ni sus textos. */
+
+#avisoDatos {
+    color: var(--text-dark);
+}
+
+#avisoDatos button {
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+#avisoDatos button:hover {
+    transform: translateY(-1px);
+}
+
+/* ---------- ELEMENTOS DE PORTADA ---------- */
+
+/* Estas clases solo se aplican si ya existen en tus vistas. */
+
+.hero {
+    padding: 4rem 2rem;
+    background: linear-gradient(
+        135deg,
+        #fff8f0 0%,
+        #f8e6ee 55%,
+        #eee7f8 100%
+    );
+    border-radius: 22px;
+    margin: 2rem 0;
+}
+
+.hero h1 {
+    color: #80516e;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-pink {
+    background-color: var(--pastel-pink);
+    padding: 2.5rem 0;
+    border-radius: 20px;
+}
+
+.section-lilac {
+    background-color: var(--pastel-lilac);
+    padding: 2.5rem 0;
+    border-radius: 20px;
+}
+
+/* ---------- ACCESIBILIDAD ---------- */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #c982a5;
+    outline-offset: 3px;
+}
+
+/* ---------- ADAPTACIÓN A TABLET Y MÓVIL ---------- */
+
+@media (max-width: 768px) {
+    .container {
+        width: 94%;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 0.25rem;
+    }
+
+    .nav-links a {
+        padding: 0.4rem 0.55rem;
+        font-size: 0.9rem;
+    }
+
+    .directory-header {
+        margin-top: 1.5rem;
+    }
+
+    .providers-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-container {
+        padding: 2rem 0;
+    }
+
+    .auth-box {
+        padding: 1.5rem;
+    }
+
+    .header-action {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .data-table th,
+    .data-table td {
+        padding: 0.7rem;
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        padding: 2.5rem 1.25rem;
+    }
+}
+
+/* ---------- PANTALLAS MUY PEQUEÑAS ---------- */
+
+@media (max-width: 420px) {
+    body {
+        font-size: 15px;
+    }
+
+    .nav-links {
+        gap: 0.15rem;
+    }
+
+    .nav-links a {
+        padding: 0.35rem 0.45rem;
+        font-size: 0.82rem;
+    }
+
+    .card {
+        padding: 1.1rem;
+    }
+
+    .auth-box {
+        padding: 1.2rem;
+    }
+
+    .filters {
+        gap: 0.4rem;
+    }
+
+    .btn-filter {
+        padding: 0.45rem 0.8rem;
+    }
+}
+
+/* ---------- MOVIMIENTO REDUCIDO ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
+/* ===== DISEÑO PASTEL: RECUERDOS INOLVIDABLES ===== */
+
+:root {
+    --primary-color: #c96b91;
+    --primary-hover: #ad5078;
+    --secondary-color: #f2dce8;
+    --bg-light: #fff8f0;
+    --white: #ffffff;
+    --border-color: #ead8e5;
+    --text-dark: #514651;
+}
+
+/* Fondo general crema */
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+/* Encabezado */
+.navbar {
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid #f0dce6;
+    box-shadow: 0 3px 14px rgba(105, 72, 96, 0.06);
+}
+
+/* Títulos */
+.directory-header h1,
+.directory-header h2,
+.directory-header h3 {
+    color: #c0447b;
+}
+
+/* Espacio y orden del directorio */
+.directory-header {
+    margin-bottom: 24px;
+}
+
+.providers-grid {
+    gap: 22px;
+}
+
+/* Tarjetas */
+.card {
+    background: #ffffff;
+    border: 1px solid #f0dce6;
+    border-radius: 16px;
+    box-shadow: 0 5px 18px rgba(105, 72, 96, 0.07);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 26px rgba(105, 72, 96, 0.13);
+}
+
+/* Botones principales */
+.btn-primary {
+    background: linear-gradient(135deg, #d879a1, #bd5d8b);
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+    background: #ad5078;
+    box-shadow: 0 5px 12px rgba(173, 80, 120, 0.22);
+    transform: translateY(-2px);
+}
+
+/* Botones secundarios */
+.btn-secondary {
+    background: #eee5fa;
+    color: #73529a;
+    border: 1px solid #dfd0f2;
+    border-radius: 10px;
+}
+
+/* Etiquetas */
+.badge,
+.category-tag {
+    border-radius: 20px;
+}
+
+/* Pie de página */
+.footer {
+    background: #eee5fa;
+    color: #5e4c76;
+    border-top: 1px solid #dfd0f2;
+}
+
+/* Movimiento suave y accesibilidad */
+a,
+button {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
+body {
+    background-color: #fff0b3 !important;
+}
+
+.card {
+    border: 5px solid #8e44ad !important;
+}
+
+/* PIE DE PÁGINA ROMÁNTICO */
+
+body > footer {
+    background: #fff8fa !important;
+    border-top: 1px solid #edcbd8 !important;
+    box-shadow: none !important;
+    margin-top: 45px !important;
+}
+
+body > footer h3 {
+    color: #9d486b !important;
+    font-family: Georgia, serif !important;
+}
+
+body > footer h4 {
+    color: #84445f !important;
+    border-color: #e4b7cb !important;
+}
+
+body > footer a {
+    color: #765665 !important;
+}
+
+body > footer a:hover {
+    color: #b04e79 !important;
+}
+
+body > footer > div:last-child {
+    border-top: 1px solid #ecd8e0 !important;
+}
+
+

@@ -1,0 +1,71 @@
+/* Estilos exclusivos de la portada. No altera formularios ni enlaces del sistema. */
+.ri-hero, .ri-directorio, .ri-beneficios { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+.ri-hero { background: radial-gradient(circle at 88% 24%, #f4d9e5 0, transparent 28%), linear-gradient(110deg,#fff8f3 0%,#fceaf0 65%,#f3dfe9 100%); border: 1px solid #f0dce4; border-radius: 24px; padding: clamp(32px,5vw,76px); margin: 34px 0 44px; min-height: 330px; display: flex; align-items: center; justify-content: space-between; gap: 24px; box-shadow: 0 12px 32px rgba(120,66,86,.08); overflow: hidden; }
+.ri-hero-contenido { max-width: 650px; position: relative; z-index: 1; }
+.ri-sobretitulo { color: #ac6480; font-size: .78rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+.ri-hero h1, .ri-seccion-cabecera h2 { font-family: Georgia,'Times New Roman',serif; font-weight: normal; color: #873c5e; }
+.ri-hero h1 { font-size: clamp(2.2rem,4.7vw,4.3rem); line-height: 1.12; margin: 16px 0 20px; }
+.ri-hero h1 em { color: #c96b91; font-weight: normal; }
+.ri-hero p { color: #634d59; font-size: 1.08rem; max-width: 520px; line-height: 1.65; }
+.ri-hero-acciones { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.ri-boton { display: inline-flex; justify-content: center; align-items: center; text-align: center; width: auto; padding: 12px 20px; min-height: 44px; border-radius: 24px; text-decoration: none; font-size: .92rem; font-weight: 600; border: 1px solid transparent; cursor: pointer; transition: background-color .2s ease, transform .2s ease, box-shadow .2s ease; }
+.ri-boton:hover { transform: translateY(-2px); }
+.ri-boton-primario { background-color: #a94f75; color: #fff !important; box-shadow: 0 4px 12px rgba(149,64,101,.14); }
+.ri-boton-primario:hover { background-color: #883e60; color: #fff !important; }
+.ri-boton-secundario { background-color: rgba(255,255,255,.85); color: #873c5e !important; border-color: #c98ba5; }
+.ri-boton-secundario:hover { background-color: #f9dfea; }
+.ri-hero-ilustracion { flex: 0 0 25%; min-height: 220px; display: flex; justify-content: center; align-items: center; gap: 12px; color: #a36a72; background: radial-gradient(circle,rgba(255,255,255,.7),transparent 70%); }
+.ri-hero-ilustracion strong { font: italic 110px Georgia,serif; color: #c77d98; text-shadow: 4px 6px 0 rgba(255,255,255,.8); }
+.ri-hero-ilustracion span { color: #bd9c68; font-size: 1.8rem; }
+.ri-directorio { margin-bottom: 48px; scroll-margin-top: 24px; }
+.ri-seccion-cabecera { display: flex; justify-content: space-between; align-items: end; gap: 20px; flex-wrap: wrap; padding-bottom: 24px; }
+.ri-seccion-cabecera h2 { font-size: clamp(1.9rem,3.4vw,2.7rem); margin: 8px 0; }
+.ri-seccion-cabecera p { color: #72606b; margin: 0; }
+.ri-admin-crear { white-space: nowrap; }
+.ri-proveedores-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 22px; }
+.ri-proveedor-card { display: flex; flex-direction: column; min-width: 0; background: #fffdfc; border: 1px solid #ead8e1; border-radius: 18px; overflow: hidden; box-shadow: 0 7px 24px rgba(114,69,88,.09); transition: transform .22s ease, box-shadow .22s ease; }
+.ri-proveedor-card:hover { transform: translateY(-4px); box-shadow: 0 13px 30px rgba(114,69,88,.15); }
+.ri-proveedor-superior { min-height: 80px; background: linear-gradient(110deg,#f5e0e8,#f1e9f7); padding: 20px; display: flex; gap: 9px; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; }
+.ri-categoria,.ri-destacado { font-size: .75rem; font-weight: 700; padding: 6px 10px; border-radius: 999px; background: #fffafc; color: #934c6e; }
+.ri-destacado { color: #87612b; background: #fff4d9; }
+.ri-proveedor-contenido { padding: 22px 22px 8px; flex-grow: 1; }
+.ri-proveedor-contenido h3 { font: bold 1.38rem Georgia,serif; color: #873c5e; margin: 0 0 10px; overflow-wrap: anywhere; }
+.ri-descripcion { color: #655861; font-size: .94rem; line-height: 1.55; margin-bottom: 20px; overflow-wrap: anywhere; }
+.ri-dato { margin: 7px 0; font-size: .86rem; line-height: 1.45; color: #62545d; overflow-wrap: anywhere; }
+.ri-dato span { display: inline-block; min-width: 20px; color: #b76c8c; font-weight: bold; }
+.ri-proveedor-acciones { padding: 12px 22px 22px; display: grid; gap: 10px; }
+.ri-proveedor-acciones .ri-boton, .ri-proveedor-acciones form { width: 100%; }
+.ri-proveedor-acciones form { margin: 0; }
+.ri-boton-carrito { display: flex; width: 100%; background: #f1e7f6; color: #744e87; border-color: #e0ccea; }
+.ri-boton-carrito:hover { background: #e5d5ee; }
+.ri-acciones-admin { display: flex; justify-content: space-around; gap: 14px; border-top: 1px solid #f0e4e9; padding-top: 14px; margin-top: 4px; }
+.ri-acciones-admin a { color: #9c4a70; text-decoration: none; }
+.ri-acciones-admin a:hover { text-decoration: underline; }
+.ri-vacio { grid-column: 1 / -1; padding: 44px 16px; text-align: center; color: #78636d; border: 1px dashed #e5cad8; border-radius: 18px; }
+.ri-beneficios { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; background: #fbeef2; border: 1px solid #f0dfe6; border-radius: 20px; padding: 28px; margin: 0 0 44px; }
+.ri-beneficios strong { display: block; color: #873c5e; font: bold 1.15rem Georgia,serif; margin-bottom: 8px; }
+.ri-beneficios p { color: #6f6069; margin: 0; font-size: .92rem; }
+@media (max-width: 900px) { .ri-proveedores-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } .ri-hero-ilustracion { flex-basis: 20%; } }
+@media (max-width: 620px) { .ri-hero { padding: 30px 24px; margin: 20px 0 36px; } .ri-hero-ilustracion { display: none; } .ri-proveedores-grid, .ri-beneficios { grid-template-columns: 1fr; } .ri-seccion-cabecera { align-items: stretch; } .ri-admin-crear { align-self: start; } .ri-proveedor-contenido { padding: 19px 19px 8px; } .ri-proveedor-acciones { padding: 12px 19px 19px; } }
+@media (prefers-reduced-motion: reduce) { .ri-boton, .ri-proveedor-card { transition: none; } .ri-boton:hover, .ri-proveedor-card:hover { transform: none; } }
+/* Neutraliza el fondo amarillo de prueba que el CSS existente fuerza con !important. */
+body { background-color: #fff8f3 !important; }
+/* Imagen en tarjetas de proveedores / paquetes */
+.ri-proveedor-imagen {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 18px 18px 0 0;
+    background: #f7edf1;
+}
+
+.ri-proveedor-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.ri-proveedor-card {
+    overflow: hidden;
+}

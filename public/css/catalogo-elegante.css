@@ -1,0 +1,179 @@
+
+/* CATÁLOGO DE RECUERDOS INOLVIDABLES */
+
+.catalogo-ri {
+    width: 100%;
+    max-width: 1200px;
+    margin: 35px auto 50px;
+    padding: 0 15px;
+}
+
+.catalogo-ri-encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.catalogo-ri-etiqueta {
+    color: #bd6389;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.catalogo-ri h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(27px, 3vw, 38px);
+    font-weight: 500;
+    color: #8b3b60;
+    margin: 8px 0;
+}
+
+.catalogo-ri-encabezado p {
+    color: #75606b;
+    font-size: 14px;
+    margin: 0;
+}
+
+.catalogo-ri-nuevo {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 25px;
+    background: #ad5478;
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.catalogo-ri-nuevo:hover {
+    background: #873957;
+    color: white;
+}
+
+.catalogo-ri-tabla-contenedor {
+    background: white;
+    border: 1px solid #ecd3de;
+    border-radius: 18px;
+    overflow-x: auto;
+    box-shadow: 0 8px 24px rgba(128, 70, 95, 0.07);
+}
+
+.catalogo-ri-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    min-width: 600px;
+}
+
+.catalogo-ri-tabla thead {
+    background: #f8e6ed;
+}
+
+.catalogo-ri-tabla th {
+    color: #873957;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 16px;
+}
+
+.catalogo-ri-tabla td {
+    padding: 18px 16px;
+    border-top: 1px solid #f1e1e8;
+    vertical-align: middle;
+    font-size: 14px;
+    color: #62505b;
+}
+
+.catalogo-ri-tabla tbody tr:hover {
+    background: #fff9fb;
+}
+
+.catalogo-ri-nombre {
+    display: block;
+    color: #853e60;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.catalogo-ri-descripcion {
+    color: #81737b;
+    font-size: 12px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.catalogo-ri-categoria {
+    display: inline-block;
+    background: #f7e9f1;
+    color: #935171;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.catalogo-ri-precio {
+    color: #a54873;
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+.catalogo-ri-acciones {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.catalogo-ri-editar,
+.catalogo-ri-eliminar {
+    padding: 8px 13px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.catalogo-ri-editar {
+    background: #ad5478;
+    color: white;
+}
+
+.catalogo-ri-editar:hover {
+    background: #873957;
+    color: white;
+}
+
+.catalogo-ri-eliminar {
+    border: 1px solid #dba4b9;
+    color: #a6486d;
+    background: #fff;
+}
+
+.catalogo-ri-eliminar:hover {
+    background: #fff0f4;
+}
+
+.catalogo-ri-vacio {
+    padding: 40px !important;
+    text-align: center;
+    color: #7d6675;
+}
+
+@media (max-width: 768px) {
+    .catalogo-ri {
+        margin-top: 25px;
+    }
+
+    .catalogo-ri-encabezado {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .catalogo-ri-nuevo {
+        white-space: normal;
+    }
+}

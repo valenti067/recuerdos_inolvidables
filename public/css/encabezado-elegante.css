@@ -1,0 +1,1247 @@
+
+/* =========================================
+   RECUERDOS INOLVIDABLES
+   ENCABEZADO ROMÁNTICO DE DOS NIVELES
+   ========================================= */
+
+/* ESTRUCTURA GENERAL */
+
+.ri-header-doble {
+    width: 100%;
+    background: #fffaf8;
+    position: relative;
+    z-index: 20;
+    border-bottom: 1px solid #efd1dc;
+    box-shadow: 0 5px 20px rgba(130, 70, 95, 0.08);
+}
+
+/* NIVEL SUPERIOR */
+
+.ri-header-superior {
+    width: 100%;
+    min-height: 225px;
+    padding: 24px 4%;
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            ellipse at bottom left,
+            #f8dce6 0%,
+            transparent 40%
+        ),
+        radial-gradient(
+            ellipse at bottom right,
+            #f8dce6 0%,
+            transparent 40%
+        ),
+        linear-gradient(
+            120deg,
+            #fff7f5,
+            #fffdfb,
+            #fff3f6
+        );
+}
+
+/* FLORES DECORATIVAS */
+
+.ri-decoracion {
+    position: absolute;
+    top: 8px;
+    font-family: Georgia, serif;
+    font-size: 84px;
+    color: #e8aec3;
+    opacity: 0.5;
+    pointer-events: none;
+    line-height: 1;
+}
+
+.ri-decoracion-izquierda {
+    left: 3%;
+    transform: rotate(-24deg);
+}
+
+.ri-decoracion-derecha {
+    right: 3%;
+    transform: rotate(24deg);
+}
+
+/* DISTRIBUCIÓN DEL LOGO */
+
+.ri-identidad {
+    width: 100%;
+    max-width: 1250px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 190px minmax(0, 1fr) 190px;
+    align-items: center;
+    gap: 30px;
+}
+
+.ri-logo-enlace {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    position: relative;
+    z-index: 2;
+}
+
+.ri-logo-principal {
+    display: block;
+    width: 155px !important;
+    height: 155px !important;
+    max-width: 155px !important;
+    max-height: 155px !important;
+    object-fit: contain;
+}
+
+/* NOMBRE DEL SITIO */
+
+.ri-identidad-texto {
+    grid-column: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    min-width: 0;
+}
+
+.ri-corona-superior {
+    color: #d4a46a;
+    font-size: 38px;
+    font-family: Georgia, serif;
+    line-height: 1;
+    margin-bottom: 2px;
+}
+
+.ri-titulo-enlace {
+    text-decoration: none !important;
+}
+
+.ri-nombre-principal {
+    display: block;
+
+    font-family:
+        "Brush Script MT",
+        "Palatino Linotype",
+        Georgia,
+        serif;
+
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(38px, 4.5vw, 70px);
+    line-height: 1.15;
+    letter-spacing: -1px;
+    color: #a83262;
+}
+
+.ri-titulo-enlace:hover .ri-nombre-principal {
+    color: #873b59;
+}
+
+/* CORAZÓN Y LÍNEAS */
+
+.ri-linea-corazon {
+    width: min(100%, 360px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    margin: 6px 0 10px;
+}
+
+.ri-linea-corazon span:first-child,
+.ri-linea-corazon span:last-child {
+    flex: 1;
+    height: 1px;
+    background: #d6a2b6;
+}
+
+.ri-linea-corazon span:nth-child(2) {
+    color: #b45c7d;
+    font-size: 29px;
+    line-height: 1;
+}
+
+/* SUBTÍTULO */
+
+.ri-subtitulo {
+    font-family: Georgia, serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    color: #a65d74;
+    margin: 0;
+}
+
+/* SEGUNDO NIVEL */
+
+.ri-barra-navegacion {
+    width: 100%;
+    background: linear-gradient(
+        90deg,
+        #b9718a,
+        #c7859d,
+        #b86d88
+    );
+    border-top: 1px solid #e6b6c5;
+    border-bottom: 2px solid #e9bfcf;
+}
+
+.ri-barra-interior {
+    width: 96%;
+    max-width: 1750px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+
+    padding: 10px 0;
+}
+
+/* MENÚ */
+
+.ri-nav {
+    flex: 1;
+    min-width: 0;
+}
+
+.ri-menu-lista {
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    gap: 7px;
+    margin: 0;
+    padding: 0;
+}
+
+.ri-menu-lista li {
+    list-style: none;
+}
+
+.ri-menu-lista a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 15px;
+    border-radius: 30px;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.3;
+    text-decoration: none;
+
+    color: #fff !important;
+    white-space: nowrap;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.ri-menu-lista a:hover {
+    background: rgba(255, 255, 255, 0.17);
+}
+
+/* BOTÓN INICIO */
+
+.ri-menu-lista .ri-enlace-inicio {
+    background: #fff1f4;
+    color: #9c3b62 !important;
+    padding: 11px 23px;
+}
+
+.ri-menu-lista .ri-enlace-inicio:hover {
+    background: #fff;
+}
+
+.ri-enlace-inicio span {
+    font-size: 23px;
+    margin-right: 6px;
+    line-height: 0.7;
+}
+
+/* ZONA DE USUARIO */
+
+.ri-zona-usuario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    padding-left: 22px;
+    border-left: 1px solid rgba(255, 255, 255, 0.55);
+}
+
+.ri-saludo-usuario {
+    color: #fff;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+
+    max-width: 230px;
+    overflow-wrap: anywhere;
+}
+
+.ri-iniciar-sesion {
+    color: #fff !important;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.ri-iniciar-sesion:hover {
+    text-decoration: underline;
+}
+
+/* CERRAR SESIÓN O REGISTRO */
+
+.ri-boton-sesion {
+    display: inline-block;
+
+    padding: 10px 20px;
+    border-radius: 28px;
+
+    background: #fff8f8;
+    color: #983c63 !important;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+
+    border: 1px solid #fff;
+    transition: background-color 0.2s ease;
+}
+
+.ri-boton-sesion:hover {
+    background: #ffe6ed;
+    color: #80334e !important;
+}
+
+/* MONITORES MEDIANOS */
+
+@media (max-width: 1200px) {
+
+    .ri-identidad {
+        grid-template-columns: 155px minmax(0, 1fr) 155px;
+        gap: 15px;
+    }
+
+    .ri-logo-principal {
+        width: 130px !important;
+        height: 130px !important;
+    }
+
+    .ri-barra-interior {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .ri-zona-usuario {
+        border-left: none;
+        border-top: 1px solid rgba(255,255,255,0.3);
+        width: 100%;
+        padding: 10px 0 0;
+    }
+}
+
+/* TABLETAS */
+
+@media (max-width: 768px) {
+
+    .ri-header-superior {
+        min-height: 190px;
+        padding: 22px 15px;
+    }
+
+    .ri-identidad {
+        grid-template-columns: 110px minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .ri-identidad-texto {
+        grid-column: 2;
+    }
+
+    .ri-logo-principal {
+        width: 105px !important;
+        height: 105px !important;
+    }
+
+    .ri-corona-superior {
+        font-size: 28px;
+    }
+
+    .ri-nombre-principal {
+        font-size: clamp(27px, 5vw, 43px);
+    }
+
+    .ri-subtitulo {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .ri-decoracion {
+        font-size: 42px;
+        opacity: 0.3;
+    }
+
+    .ri-menu-lista a {
+        font-size: 13px;
+        padding: 9px 12px;
+    }
+}
+
+/* CELULARES */
+
+@media (max-width: 540px) {
+
+    .ri-header-superior {
+        min-height: auto;
+        padding: 20px 12px;
+    }
+
+    .ri-identidad {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .ri-logo-principal {
+        width: 85px !important;
+        height: 85px !important;
+    }
+
+    .ri-nombre-principal {
+        font-size: 35px;
+    }
+
+    .ri-subtitulo {
+        letter-spacing: 2px;
+        font-size: 9px;
+    }
+
+    .ri-linea-corazon {
+        width: 220px;
+    }
+
+    .ri-decoracion {
+        font-size: 35px;
+    }
+
+    .ri-barra-interior {
+        width: 95%;
+    }
+
+    .ri-menu-lista {
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .ri-menu-lista a {
+        font-size: 12px;
+        padding: 8px 10px;
+        white-space: normal;
+        text-align: center;
+    }
+
+    .ri-zona-usuario {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+/* ACCESIBILIDAD */
+
+.ri-header-doble a:focus-visible,
+.ri-header-doble button:focus-visible {
+    outline: 3px solid #7d3556;
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .ri-header-doble *,
+    .ri-header-doble *::before,
+    .ri-header-doble *::after {
+        transition: none !important;
+    }
+}
+
+/* ==========================================
+   AJUSTE DE TAMAÑO DEL ENCABEZADO
+   ========================================== */
+
+/* Reducir altura del encabezado superior */
+.ri-header-superior {
+    min-height: 165px;
+    padding: 10px 3%;
+}
+
+/* Dar más espacio al logo */
+.ri-identidad {
+    grid-template-columns: 220px minmax(0, 1fr) 220px;
+    gap: 15px;
+}
+
+/* Aumentar el tamaño del logo original */
+.ri-logo-principal {
+    width: 190px !important;
+    height: 150px !important;
+    max-width: 190px !important;
+    max-height: 150px !important;
+    object-fit: contain;
+}
+
+/* Reducir ligeramente el nombre */
+.ri-nombre-principal {
+    font-size: clamp(32px, 3.5vw, 55px);
+}
+
+/* Compactar los adornos */
+.ri-corona-superior {
+    font-size: 28px;
+    margin-bottom: 0;
+}
+
+.ri-linea-corazon {
+    margin: 2px 0 5px;
+}
+
+.ri-linea-corazon span:nth-child(2) {
+    font-size: 23px;
+}
+
+.ri-subtitulo {
+    font-size: 11px;
+    letter-spacing: 4px;
+}
+
+/* Reducir la altura de la barra rosa */
+.ri-barra-interior {
+    padding: 6px 0;
+}
+
+.ri-menu-lista a {
+    padding: 8px 13px;
+}
+
+.ri-boton-sesion {
+    padding: 8px 17px;
+}
+
+/* Mantener proporciones en tabletas */
+@media (max-width: 768px) {
+    .ri-header-superior {
+        min-height: 145px;
+        padding: 10px 12px;
+    }
+
+    .ri-identidad {
+        grid-template-columns: 145px minmax(0, 1fr);
+    }
+
+    .ri-logo-principal {
+        width: 140px !important;
+        height: 125px !important;
+        max-width: 140px !important;
+        max-height: 125px !important;
+    }
+}
+
+/* Adaptación a celulares */
+@media (max-width: 540px) {
+    .ri-header-superior {
+        min-height: auto;
+        padding: 12px;
+    }
+
+    .ri-identidad {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .ri-logo-principal {
+        width: 110px !important;
+        height: 100px !important;
+        max-width: 110px !important;
+        max-height: 100px !important;
+    }
+
+    .ri-nombre-principal {
+        font-size: 32px;
+    }
+
+    .ri-subtitulo {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+}
+
+/* ==========================================
+   AJUSTE FINAL DE TAMAÑO Y LOGO
+   ========================================== */
+
+/* Encabezado superior más compacto */
+.ri-header-superior {
+    min-height: 130px;
+    height: 145px;
+    padding: 6px 3%;
+}
+
+/* Distribución del logo y nombre */
+.ri-identidad {
+    grid-template-columns: 200px minmax(0, 1fr) 200px;
+    gap: 12px;
+}
+
+/* Espacio visible reservado al logo */
+.ri-logo-enlace {
+    width: 180px;
+    height: 130px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Aumentar visualmente el logo */
+.ri-logo-principal {
+    width: 240px !important;
+    height: 240px !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* Nombre ligeramente más pequeño */
+.ri-nombre-principal {
+    font-size: clamp(32px, 3vw, 47px);
+}
+
+/* Adornos más compactos */
+.ri-corona-superior {
+    font-size: 23px;
+    margin-bottom: 0;
+}
+
+.ri-linea-corazon {
+    margin: 0 0 3px;
+}
+
+.ri-linea-corazon span:nth-child(2) {
+    font-size: 19px;
+}
+
+.ri-subtitulo {
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+/* Flores discretas */
+.ri-decoracion {
+    font-size: 48px;
+    top: 15px;
+}
+
+/* Barra inferior ligeramente más delgada */
+.ri-barra-interior {
+    padding: 5px 0;
+}
+
+.ri-menu-lista a {
+    padding: 7px 12px;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .ri-header-superior {
+        height: auto;
+        min-height: 125px;
+    }
+
+    .ri-identidad {
+        grid-template-columns: 135px minmax(0, 1fr);
+    }
+
+    .ri-logo-enlace {
+        width: 125px;
+        height: 115px;
+    }
+
+    .ri-logo-principal {
+        width: 185px !important;
+        height: 185px !important;
+    }
+}
+
+/* Celulares */
+@media (max-width: 540px) {
+    .ri-header-superior {
+        height: auto;
+        min-height: 0;
+        padding: 10px;
+    }
+
+    .ri-identidad {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ri-logo-enlace {
+        width: 115px;
+        height: 100px;
+    }
+
+    .ri-logo-principal {
+        width: 170px !important;
+        height: 170px !important;
+    }
+
+    .ri-nombre-principal {
+        font-size: 31px;
+    }
+}
+
+/* CORRECCIÓN DEL LOGO SIN RECORTES */
+
+.ri-identidad {
+    grid-template-columns: 180px minmax(0, 1fr) 180px;
+}
+
+.ri-logo-enlace {
+    width: 180px;
+    height: 125px;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ri-logo-principal {
+    display: block;
+    width: 155px !important;
+    height: 125px !important;
+    max-width: 155px !important;
+    max-height: 125px !important;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* TABLETAS */
+
+@media (max-width: 768px) {
+    .ri-identidad {
+        grid-template-columns: 120px minmax(0, 1fr);
+    }
+
+    .ri-logo-enlace {
+        width: 115px;
+        height: 105px;
+    }
+
+    .ri-logo-principal {
+        width: 110px !important;
+        height: 100px !important;
+        max-width: 110px !important;
+        max-height: 100px !important;
+    }
+}
+
+/* CELULARES */
+
+@media (max-width: 540px) {
+    .ri-logo-enlace {
+        width: 110px;
+        height: 100px;
+    }
+
+    .ri-logo-principal {
+        width: 105px !important;
+        height: 95px !important;
+        max-width: 105px !important;
+        max-height: 95px !important;
+    }
+}
+
+/* ==========================================
+   CENTRADO DEL ENCABEZADO
+   ========================================== */
+
+/* Centrar el conjunto de logo y título */
+.ri-identidad {
+    width: min(100%, 900px);
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* Logo completo y centrado */
+.ri-logo-enlace {
+    width: 180px;
+    height: 125px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+}
+
+/* Mantener el tamaño actual del logo */
+.ri-logo-principal {
+    width: 155px !important;
+    height: 125px !important;
+    max-width: 155px !important;
+    max-height: 125px !important;
+    object-fit: contain;
+}
+
+/* Centrar el nombre y sus adornos */
+.ri-identidad-texto {
+    grid-column: 2;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+
+/* Centrar menú y sus opciones */
+.ri-barra-interior {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.ri-menu-lista {
+    justify-content: center;
+}
+
+/* Adaptación a tabletas */
+@media (max-width: 768px) {
+    .ri-identidad {
+        width: 100%;
+        grid-template-columns: 125px minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .ri-logo-enlace {
+        width: 120px;
+        height: 105px;
+    }
+
+    .ri-identidad-texto {
+        grid-column: 2;
+    }
+}
+
+/* Adaptación a celulares */
+@media (max-width: 540px) {
+    .ri-identidad {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .ri-identidad-texto {
+        width: 100%;
+    }
+}
+
+/* ==========================================
+   CENTRADO EXACTO DEL ENCABEZADO
+   ========================================== */
+
+/* Contenedor principal */
+.ri-header-superior {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Tres columnas simétricas */
+.ri-header-superior .ri-identidad {
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr) 180px;
+    align-items: center;
+
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+/* Logo a la izquierda */
+.ri-header-superior .ri-logo-enlace {
+    grid-column: 1;
+    justify-self: center;
+
+    width: 180px;
+    height: 125px;
+    margin: 0;
+    overflow: visible;
+}
+
+/* Conservar tamaño del logo */
+.ri-header-superior .ri-logo-principal {
+    width: 155px !important;
+    height: 125px !important;
+    max-width: 155px !important;
+    max-height: 125px !important;
+    object-fit: contain;
+}
+
+/* Título exactamente en la columna central */
+.ri-header-superior .ri-identidad-texto {
+    grid-column: 2;
+    justify-self: center;
+
+    width: 100%;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Centrar título y adornos */
+.ri-header-superior .ri-titulo-enlace {
+    display: block;
+    text-align: center;
+}
+
+.ri-header-superior .ri-linea-corazon {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ri-header-superior .ri-subtitulo {
+    text-align: center;
+}
+
+/* Tabletas */
+@media (max-width: 768px) {
+    .ri-header-superior .ri-identidad {
+        grid-template-columns: 125px minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .ri-header-superior .ri-logo-enlace {
+        grid-column: 1;
+        width: 120px;
+        height: 105px;
+    }
+
+    .ri-header-superior .ri-identidad-texto {
+        grid-column: 2;
+    }
+}
+
+/* Celulares */
+@media (max-width: 540px) {
+    .ri-header-superior .ri-identidad {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .ri-header-superior .ri-identidad-texto {
+        width: 100%;
+    }
+}
+
+/* ==========================================
+   ALINEACIÓN DEL LOGO, TÍTULO Y NAVEGACIÓN
+   ========================================== */
+
+/* Logo más a la izquierda y título centrado */
+.ri-header-superior .ri-identidad {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr) 220px;
+    align-items: center;
+    gap: 0;
+}
+
+/* Colocar el logo a la izquierda */
+.ri-header-superior .ri-logo-enlace {
+    grid-column: 1;
+    justify-self: start;
+    margin-left: 15px;
+}
+
+/* Centrar el título en la página */
+.ri-header-superior .ri-identidad-texto {
+    grid-column: 2;
+    justify-self: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+/* Barra de navegación */
+.ri-barra-interior {
+    width: 96%;
+    max-width: 1700px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Enlaces centrados */
+.ri-nav {
+    width: 100%;
+    min-width: 0;
+}
+
+.ri-menu-lista {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Usuario alineado a la derecha */
+.ri-zona-usuario {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+
+    width: auto;
+    min-width: 0;
+    margin: 0;
+    padding-left: 18px;
+}
+
+/* TABLETAS */
+@media (max-width: 1100px) {
+    .ri-barra-interior {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ri-zona-usuario {
+        justify-content: center;
+        border-left: none;
+        padding: 10px 0 0;
+        width: 100%;
+    }
+}
+
+/* CELULARES */
+@media (max-width: 540px) {
+    .ri-header-superior .ri-identidad {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .ri-header-superior .ri-logo-enlace {
+        margin-left: 0;
+    }
+
+    .ri-barra-interior {
+        width: 95%;
+    }
+
+    .ri-menu-lista {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+}
+
+/* ==========================================
+   ALINEACIÓN DEL LOGO, TÍTULO Y NAVEGACIÓN
+   ========================================== */
+
+/* Logo más a la izquierda y título centrado */
+.ri-header-superior .ri-identidad {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr) 220px;
+    align-items: center;
+    gap: 0;
+}
+
+/* Colocar el logo a la izquierda */
+.ri-header-superior .ri-logo-enlace {
+    grid-column: 1;
+    justify-self: start;
+    margin-left: 15px;
+}
+
+/* Centrar el título en la página */
+.ri-header-superior .ri-identidad-texto {
+    grid-column: 2;
+    justify-self: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+/* Barra de navegación */
+.ri-barra-interior {
+    width: 96%;
+    max-width: 1700px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Enlaces centrados */
+.ri-nav {
+    width: 100%;
+    min-width: 0;
+}
+
+.ri-menu-lista {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Usuario alineado a la derecha */
+.ri-zona-usuario {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+
+    width: auto;
+    min-width: 0;
+    margin: 0;
+    padding-left: 18px;
+}
+
+/* TABLETAS */
+@media (max-width: 1100px) {
+    .ri-barra-interior {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ri-zona-usuario {
+        justify-content: center;
+        border-left: none;
+        padding: 10px 0 0;
+        width: 100%;
+    }
+}
+
+/* CELULARES */
+@media (max-width: 540px) {
+    .ri-header-superior .ri-identidad {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .ri-header-superior .ri-logo-enlace {
+        margin-left: 0;
+    }
+
+    .ri-barra-interior {
+        width: 95%;
+    }
+
+    .ri-menu-lista {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+}
+
+/* ==========================================
+   DISTRIBUCIÓN SIMÉTRICA DEL MENÚ
+   Sin modificar colores ni tamaños
+   ========================================== */
+
+@media (min-width: 1101px) {
+
+    .ri-barra-interior {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 96%;
+        max-width: 1700px;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    /* Centrar los botones en toda la barra */
+
+    .ri-nav {
+        grid-row: 1;
+        grid-column: 1;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .ri-menu-lista {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    /* Mantener el usuario a la derecha */
+
+    .ri-zona-usuario {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 12px;
+        width: auto;
+        border-left: 1px solid rgba(255,255,255,0.5);
+        padding-left: 15px;
+    }
+}
