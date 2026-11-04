@@ -1,7 +1,6 @@
 
 RewriteEngine On
-RewriteBase /recuerdos_inolvidables/recuerdos_inolvidables/
-
+RewriteBase /recuerdos_inolvidables
 RewriteRule ^public/ - [L]
 RewriteRule ^$ public/index.php [L]
 RewriteRule ^(.*)$ public/$1 [L]

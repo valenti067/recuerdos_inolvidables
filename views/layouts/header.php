@@ -15,13 +15,13 @@
     <!-- ESTILOS GENERALES -->
     <link
         rel="stylesheet"
-        href="/recuerdos_inolvidables/recuerdos_inolvidables/public/css/styles.css?v=5"
+        href="/recuerdos_inolvidables/public/css/styles.css?v=5"
     >
 
     <!-- DISEÑO ROMÁNTICO DEL ENCABEZADO -->
     <link
         rel="stylesheet"
-        href="/recuerdos_inolvidables/recuerdos_inolvidables/public/css/encabezado-elegante.css?v=3"
+        href="/recuerdos_inolvidables/public/css/encabezado-elegante.css?v=3"
     >
 </head>
 
@@ -41,7 +41,7 @@ $esProveedor = $rolUsuario === 3;
 $esComprador = $rolUsuario === 2;
 
 // Ruta absoluta del logo desde la raíz del servidor.
-$rutaLogo = '/recuerdos_inolvidables/recuerdos_inolvidables/public/img/logo_recuerdos_sin_fondo.png';
+$rutaLogo = '/recuerdos_inolvidables/public/img/logo_recuerdos_sin_fondo.png';
 ?>
 
 <!-- ENCABEZADO ROMÁNTICO -->
