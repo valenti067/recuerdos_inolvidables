@@ -134,7 +134,7 @@ $esProveedorFooter = $rolFooter === 3;
         &copy; <?= date('Y') ?>
         Recuerdos Inolvidables 15 —
         Todos los derechos reservados.
-        SENA CDM
+        Valentina Forero - Marielys Azocar
 
     </div>
 
